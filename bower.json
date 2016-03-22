@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "description": "Personal website",
+  "authors": [
+    "Alexandro Sanchez Bach <alexaltea123@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexAltea/website.git"
+  },
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-local-storage": "~0.2.2",
+    "angular-resource": "^1.3.3",
+    "angular-route": "~1.3.4",
+  },
+  "devDependencies": {},
+  "private": true
+}
