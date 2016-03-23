@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         cssmin: {
             combine: {
                 files: {
-                    '<%= path.dist %>/truthmines.css': [
+                    '<%= path.dist %>/darkair.css': [
                         '<%= path.app %>/styles/**/*.css'
                     ]
                 }
@@ -59,6 +59,12 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        concat: {
+            scripts: {
+                src: ['<%= path.app %>/scripts/**/*.js'],
+                dest: '<%= path.dist %>/darkair.js'
+            }
+        },
         connect: {
             options: {
                 port: 9000,
@@ -74,8 +80,8 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: '<%= path.app %>/scripts/**/*.ts',
-                tasks: ['ts']
+                files: '<%= path.app %>/scripts/**/*.js',
+                tasks: ['concat']
             },
             styles: {
                 files: '<%= path.app %>/styles/**/*.css',
@@ -105,6 +111,7 @@ module.exports = function (grunt) {
         'copy',
         'cssmin',
         'htmlmin',
+        'concat'
     ]);
     grunt.registerTask('serve', [
         'connect',
