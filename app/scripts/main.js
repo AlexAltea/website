@@ -5,11 +5,4 @@
 
 // Background
 var canvas = document.getElementById('background');
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-
-resizeCanvas();
-var background = new Background1(canvas);
+var background = new Background(canvas);
