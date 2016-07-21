@@ -20,21 +20,7 @@ module.exports = function (grunt) {
                 cwd: '<%= path.app %>/',
                 src: ['**/*.html', '**/*.jpg'],
                 dest: '<%= path.dist %>/'
-            }/*,
-            externals: {
-                expand: true,
-                flatten: true,
-                src: [
-                    'node_modules/angular2/bundles/angular2.dev.js',
-                    'node_modules/angular2/bundles/angular2-polyfills.js',
-                    'node_modules/angular2/bundles/router.dev.js',
-                    'node_modules/es6-shim/es6-shim.min.js',
-                    'node_modules/rxjs/bundles/Rx.js',
-                    'node_modules/systemjs/dist/system.src.js',
-                    'node_modules/systemjs/dist/system-polyfills.js'
-                ],
-                dest: '<%= path.dist %>/externals'
-            }*/
+            }
         },
         cssmin: {
             combine: {
@@ -65,6 +51,15 @@ module.exports = function (grunt) {
                 dest: '<%= path.dist %>/darkair.js'
             }
         },
+        uglify: {
+            dist: {
+                files: {
+                    '<%= path.dist %>/darkair.js': [
+                        '<%= path.dist %>/darkair.js'
+                    ]
+                }
+            }
+        },
         connect: {
             options: {
                 port: 9000,
@@ -81,7 +76,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: '<%= path.app %>/scripts/**/*.js',
-                tasks: ['concat']
+                tasks: ['concat', 'uglify']
             },
             styles: {
                 files: '<%= path.app %>/styles/**/*.css',
@@ -111,7 +106,8 @@ module.exports = function (grunt) {
         'copy',
         'cssmin',
         'htmlmin',
-        'concat'
+        'concat',
+        'uglify'
     ]);
     grunt.registerTask('serve', [
         'connect',

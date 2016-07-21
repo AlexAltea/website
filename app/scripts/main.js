@@ -3,6 +3,8 @@
  * Released under MIT license. Read LICENSE for more details.
  */
 
+// Essential
+Math.TAU = 2 * Math.PI;
+
 // Background
-var canvas = document.getElementById('background');
-var background = new Background(canvas);
+var bg = new Background();
