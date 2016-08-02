@@ -4,20 +4,102 @@
     <meta name="author" content="Alexandro Sanchez Bach">
     <meta name="description" content="Personal website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="darkair.css">
-
-    <!-- Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet'>
-  </head>
-  <body>
-    <canvas id="background">
-    </canvas>
-
-    <!-- Scripts -->
-    <script src="darkair.js"></script>
 
     <!-- Dependencies -->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="darkair.css">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <!--DarkAir-->
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div id="background"></div>
+    <div id="banner">
+      <div class="title">DarkAir</div>
+      <div class="subtitle">&nbsp; Alexandro Sánchez Bach</div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Contact -->
+        <div class="col-md-4">
+          <h2>Contact</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <span style="font-weight: 500">Phone &nbsp;&nbsp;&nbsp;</span>
+                </td>
+                <td>+49 1573 1576436</td></tr>
+              <tr>
+                <td>
+                  <span style="font-weight: 500">Email</span>
+                </td>
+                <td>alexandro@darkair.de</td></tr>
+              <tr>
+                <td>
+                  <span style="font-weight: 500">PGP</span>
+                </td>
+                <td><span class="code">
+                  AF30 FAAE 1539 466F 2C40<br/>
+                  9CDA E4A5 8316 06E3 B29E
+                </span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Interests -->
+        <div class="col-md-4">
+          <h2>Interests</h2>
+          <ul>
+            <li>Number Theory</li>
+            <li>Reverse Enginering</li>
+            <li>Security</li>
+            <li>Compiler Development</li>
+            <li>Emulation</li>
+          </ul>
+        </div>
+        <!-- Links -->
+        <div class="col-md-4">
+          <h2>Links</h2>
+          Nucleus<br/>
+          Nerve<br/>
+          Nexus<br/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dependencies -->
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Custom -->
+    <script src="darkair.js"></script>
   </body>
 </html>
