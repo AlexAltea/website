@@ -8,10 +8,19 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  font-size: 16px;
   box-sizing: border-box;
-  font-family: 'Helvetica', 'Arial', sans-serif;
   color: #DDD;
+}
+
+/* Links */
+a:link    { color: #e7bd74; text-decoration: none; } /* Unvisited link */
+a:visited { color: #e7bd74; text-decoration: none; } /* Visited link */
+a:hover   { color: #f8cb82; text-decoration: none; } /* Mouse over link */
+a:active  { color: #ddb86c; text-decoration: none; } /* Selected link */
+
+b {
+  font-weight: 500;
 }
 
 /* Tables */
