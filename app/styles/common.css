@@ -55,6 +55,7 @@ td {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #e7bd74;
+  margin-bottom: 2px;
 }
 
 /* Specific DOM nodes */
